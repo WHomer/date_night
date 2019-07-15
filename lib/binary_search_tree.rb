@@ -7,6 +7,14 @@ class BinarySearchTree
     @head = nil
   end
 
+  def max
+    node = @head
+    until node.right.nil?
+      node = node.right
+    end
+    return {node.data => node.value}
+  end
+
   def depth_of(value)
     node = @head
     depth = 0
