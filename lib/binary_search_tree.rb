@@ -15,6 +15,14 @@ class BinarySearchTree
     return {node.data => node.value}
   end
 
+  def min
+    node = @head
+    until node.left.nil?
+      node = node.left
+    end
+    return {node.data => node.value}
+  end
+
   def depth_of(value)
     node = @head
     depth = 0

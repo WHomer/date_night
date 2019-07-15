@@ -41,7 +41,13 @@ class BinarySearchTreeTest < MiniTest::Test
 
   def test_max
     result = {"Sharknado 3"=>92}
-    
+
     assert_equal result, @tree.max
+  end
+
+  def test_min
+    result = {"Johnny English"=>16}
+    
+    assert_equal result, @tree.min
   end
 end
