@@ -7,6 +7,20 @@ class BinarySearchTree
     @head = nil
   end
 
+  def include?(value)
+    node = @head
+    until node.nil?
+      if node.value == value 
+        return true
+      elsif value < node.value
+        node = node.left
+      elsif value > node.value
+        node = node.right
+      end
+    end
+    return false
+  end
+
   def insert(value, data)
     position = 0
     if @head.nil?
