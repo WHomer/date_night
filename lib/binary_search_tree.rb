@@ -7,6 +7,23 @@ class BinarySearchTree
     @head = nil
   end
 
+  def depth_of(value)
+    node = @head
+    depth = 0
+    until node.nil?
+      if node.value == value 
+        return depth
+      elsif value < node.value
+        node = node.left
+        depth += 1
+      elsif value > node.value
+        node = node.right
+        depth += 1
+      end
+    end
+    return nil
+  end
+
   def include?(value)
     node = @head
     until node.nil?
@@ -52,4 +69,5 @@ class BinarySearchTree
       end
     end
   end
+
 end

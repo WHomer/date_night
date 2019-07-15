@@ -32,4 +32,10 @@ class BinarySearchTreeTest < MiniTest::Test
     assert @tree.include?(16)
     refute @tree.include?(72)
   end
+
+  def test_depth_of
+    assert_equal 1, @tree.depth_of(92)
+    assert_equal 2, @tree.depth_of(50)
+    assert_nil @tree.depth_of(99)
+  end
 end
