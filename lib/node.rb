@@ -1,5 +1,5 @@
 class Node
-  attr_reader :data,
+  attr_accessor :data,
               :left,
               :right,
               :value
