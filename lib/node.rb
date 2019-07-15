@@ -10,4 +10,11 @@ class Node
     @left = nil
     @right = nil
   end
+
+  def sort(array = [])
+    @left.sort(array) if @left
+    array << {@data => @value}
+    @right.sort(array) if @right
+    array
+  end
 end

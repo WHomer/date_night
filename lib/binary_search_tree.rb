@@ -7,6 +7,21 @@ class BinarySearchTree
     @head = nil
   end
 
+  def load(file = 'movies.txt')
+    File.readlines('movies.txt').map do |line|
+      movie = line.chomp.split(",")
+      value = movie[0].strip.to_i
+      data = movie[1].strip
+      if include?(value) == false
+        insert(value, data)
+      end
+    end
+  end
+
+  def sort
+    @head.sort
+  end
+
   def max
     node = @head
     until node.right.nil?

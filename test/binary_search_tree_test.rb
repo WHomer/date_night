@@ -50,4 +50,18 @@ class BinarySearchTreeTest < MiniTest::Test
     
     assert_equal result, @tree.min
   end
+
+  def test_sort
+    result = [{"Johnny English"=>16},
+              {"Hannibal Buress: Animal Furnace"=>50},
+              {"Bill & Ted's Excellent Adventure"=>61},
+              {"Sharknado 3"=>92}]
+
+    assert_equal result, @tree.sort
+  end
+
+  def test_loading_of_movies_text_file
+    @tree.insert(71, "test!!!!")
+    assert_equal 99, @tree.load('movies.txt').count
+  end
 end
