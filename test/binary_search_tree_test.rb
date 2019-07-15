@@ -9,5 +9,8 @@ class BinarySearchTreeTest < MiniTest::Test
   def test_does_it_exist
     assert_instance_of BinarySearchTree, @tree
   end
-  
+
+  def test_initialize_variables
+    assert_nil @tree.head
+  end
 end
