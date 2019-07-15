@@ -1,9 +1,11 @@
 class Node
   attr_reader :data,
               :left,
-              :right
+              :right,
+              :value
 
-  def initialize(data)
+  def initialize(value, data)
+    @value = value
     @data = data
     @left = nil
     @right = nil
